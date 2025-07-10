@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Karan's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <button onclick="toggleDarkMode()" style="position:fixed; top:10px; right:10px; padding:8px 12px; background:#222; color:white; border:none; border-radius:5px; cursor:pointer;">
+    Toggle Dark Mode
+  </button>
+
+  <header>
+    <h1>Hello, I'm Karan</h1>
+    <p>Frontend Developer (Trainee)</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I’m currently learning frontend development and working on small projects.</p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript (Basic)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email: karan@example.com</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Karan Kumar</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+
+</body>
+</html>
