@@ -8,66 +8,65 @@
 </head>
 <body>
 
-  <button onclick="toggleDarkMode()" style="position:fixed; top:10px; right:10px; padding:8px 12px; background:#222; color:white; border:none; border-radius:5px; cursor:pointer;">
-    Toggle Dark Mode
-  </button>
+  <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
 
   <header>
     <h1>Hello, I'm Karan Kumar</h1>
-    <p>BCA Student | Punjab Technical University</p>
+    <p>BCA Student | Punjab Technical University | 5th Semester</p>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I'm currently pursuing <strong>Bachelor of Computer Applications (BCA)</strong> from <strong>Punjab Technical University</strong>, and I am now in my <strong>5th Semester</strong>. I have a strong interest in frontend web development and learning modern technologies.</p>
-  </section>
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>I'm currently pursuing <strong>BCA</strong> from <strong>Punjab Technical University</strong>, and I am now in my <strong>5th Semester</strong>. I enjoy frontend development and tech innovations.</p>
+    </section>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML5 & CSS3</li>
-      <li>JavaScript (Basic)</li>
-      <li>Responsive Design</li>
-      <li>Git & GitHub</li>
-      <li>Learning React.js (Upcoming)</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML5 & CSS3</li>
+        <li>JavaScript (Basic)</li>
+        <li>Responsive Design</li>
+        <li>Git & GitHub</li>
+        <li>Learning React.js</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Portfolio Website</strong> – A personal website showcasing my details and skills.</li>
-      <li><strong>To-Do App</strong> – Simple JavaScript-based task manager (under development).</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Portfolio Website</strong> – This very project, created with HTML, CSS, and JavaScript</li>
+        <li><strong>To-Do App</strong> – Task manager (Coming soon)</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Interests</h2>
-    <p>I enjoy exploring tech trends, reading about cybersecurity, and creating clean web designs. I also love learning productivity hacks and exploring how to use AI tools in daily life.</p>
-  </section>
+    <section>
+      <h2>Interests</h2>
+      <p>I love designing, exploring AI tools, learning cybersecurity, and productivity hacks.</p>
+    </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:karangeorgeingply@gmail.com">karangeorgeingply@gmail.com</a></p>
-    <p>Location: Punjab, India</p>
-  </section>
+    <section>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:karan@example.com">karan@example.com</a></p>
+      <p>Location: Punjab, India</p>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Karan Kumar | BCA Student | PTU</p>
+    <p>© 2025 Karan Kumar | BCA - PTU</p>
   </footer>
 
   <script>
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-  }
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
 
-  // Trigger animation on page load
-  window.onload = function () {
-    document.body.classList.add('loaded');
-  };
-</script>
-
+    // Trigger fade-in animation
+    window.onload = function () {
+      document.body.classList.add('loaded');
+    };
+  </script>
 </body>
 </html>
 
-    
+  
