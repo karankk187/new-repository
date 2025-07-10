@@ -1,4 +1,79 @@
-/*  Animation Keyframes */
+/* Base styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: linear-gradient(to right, #f8f9fa, #e0f7fa);
+  transition: all 0.4s ease;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  animation: fadeIn 1s ease-in-out;
+}
+
+section {
+  background: white;
+  margin: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-in-out;
+  opacity: 0;
+}
+
+footer {
+  text-align: center;
+  background: #212121;
+  color: #fff;
+  padding: 1rem;
+  font-size: 14px;
+}
+
+a {
+  color: #0072ff;
+  text-decoration: none;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: #212121;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: linear-gradient(to right, #1f1f1f, #2c2c2c);
+  color: #f5f5f5;
+}
+
+.dark-mode section {
+  background-color: #2e2e2e;
+  color: #eee;
+}
+
+.dark-mode header {
+  background: linear-gradient(to right, #000000, #434343);
+}
+
+.dark-mode footer {
+  background-color: #000;
+}
+
+/* Fade In Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -10,20 +85,28 @@
   }
 }
 
-/*  Animate Header */
-header {
-  animation: fadeIn 1s ease-in-out;
-}
-
-/*  Animate Sections */
-section {
-  animation: fadeIn 1.2s ease-in-out;
-  animation-delay: 0.3s;
-  animation-fill-mode: both;
-  opacity: 0;
-}
-
-/*  Fade-in trigger */
+/* Trigger animation on load */
 body.loaded section {
   opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  section {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .toggle-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
 }
