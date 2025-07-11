@@ -1,4 +1,16 @@
-/* Reset + Font */
+:root {
+  --bg-color: #0f0f0f;
+  --text-color: #ffffff;
+  --accent-color: #ff6600; /* Naruto orange */
+  --card-bg: #1a1a1a;
+}
+
+body.light-mode {
+  --bg-color: #fff;
+  --text-color: #111;
+  --card-bg: #f2f2f2;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,19 +19,19 @@
 }
 
 body {
-  background: #0f0f0f;
-  color: #fff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   line-height: 1.6;
+  transition: background 0.5s, color 0.5s;
 }
 
-/* Navbar */
 .navbar {
-  background: #1a1a1a;
+  background: var(--card-bg);
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #00f0ff;
+  border-bottom: 2px solid var(--accent-color);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -27,7 +39,7 @@ body {
 
 .logo {
   font-size: 1.5rem;
-  color: #00f0ff;
+  color: var(--accent-color);
   font-weight: bold;
 }
 
@@ -39,34 +51,42 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
   transition: 0.3s;
 }
 
 nav ul li a:hover {
-  color: #00f0ff;
+  color: var(--accent-color);
 }
 
-/* Hero */
+.toggle-btn {
+  background: var(--accent-color);
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
 .hero {
   text-align: center;
   padding: 100px 20px;
-  background: linear-gradient(145deg, #000, #1f1f1f);
+  background: linear-gradient(145deg, var(--bg-color), var(--card-bg));
   animation: fadeIn 2s ease-in-out;
 }
 
 .hero h1 {
   font-size: 3rem;
-  color: #00f0ff;
+  color: var(--accent-color);
   margin-bottom: 10px;
 }
 
 .hero p {
   font-size: 1.2rem;
-  color: #ccc;
+  color: var(--text-color);
 }
 
-/* Section */
 .section {
   padding: 60px 20px;
   max-width: 900px;
@@ -75,28 +95,26 @@ nav ul li a:hover {
 }
 
 .section h2 {
-  color: #00f0ff;
+  color: var(--accent-color);
   margin-bottom: 20px;
-  border-bottom: 2px solid #00f0ff;
+  border-bottom: 2px solid var(--accent-color);
   display: inline-block;
 }
 
 .section ul li,
 .section p {
-  color: #ddd;
+  color: var(--text-color);
   margin-bottom: 10px;
 }
 
-/* Footer */
 footer {
-  background: #1a1a1a;
+  background: var(--card-bg);
   text-align: center;
   padding: 20px;
-  color: #aaa;
-  border-top: 2px solid #00f0ff;
+  color: var(--text-color);
+  border-top: 2px solid var(--accent-color);
 }
 
-/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -107,7 +125,6 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
