@@ -1,60 +1,189 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Karan Kumar | Developer Portfolio</title>
+  <title>Naruto | Karan's Developer Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --bg-color: #0f0f0f;
+      --text-color: #ffffff;
+      --accent-color: #ff6600; /* Naruto orange */
+      --card-bg: #1a1a1a;
+    }body.light-mode {
+  --bg-color: #fff;
+  --text-color: #111;
+  --card-bg: #f2f2f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background 0.5s, color 0.5s;
+}
+
+.navbar {
+  background: var(--card-bg);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--accent-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+.toggle-btn {
+  background: var(--accent-color);
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(145deg, var(--bg-color), var(--card-bg));
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  animation: slideUp 1.5s ease;
+}
+
+.section h2 {
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+}
+
+.section ul li,
+.section p {
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+footer {
+  background: var(--card-bg);
+  text-align: center;
+  padding: 20px;
+  color: var(--text-color);
+  border-top: 2px solid var(--accent-color);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+  </style>
 </head>
 <body>
   <nav class="navbar">
-    <div class="logo">Karan Kumar</div>
+    <div class="logo">Karan | 🍥 Naruto Dev</div>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-  </nav>
-
-  <header class="hero">
-    <h1>Hello, I'm Karan</h1>
-    <p>BCA 5th Semester Student | Front-End Developer | PTU</p>
-  </header>
-
-  <section id="about" class="section">
+    <button class="toggle-btn" onclick="toggleTheme()">Toggle Mode</button>
+  </nav>  <header class="hero">
+    <h1>Believe It!</h1>
+    <p>I'm Karan — a frontend ninja from PTU 🥷</p>
+  </header>  <section id="about" class="section">
     <h2>About Me</h2>
-    <p>I am currently pursuing BCA from Punjab Technical University (5th semester). I'm passionate about building sleek, user-friendly websites with HTML and CSS. I'm learning modern web design and aiming to grow as a frontend developer.</p>
-  </section>
-
-  <section id="skills" class="section">
+    <p>Hi! I’m Karan, a BCA 5th semester student at Punjab Technical University. I blend passion for frontend with ninja discipline, inspired by Naruto’s never give up spirit!</p>
+  </section>  <section id="skills" class="section">
     <h2>Skills</h2>
     <ul>
-      <li>✅ HTML5</li>
-      <li>✅ CSS3</li>
-      <li>✅ Responsive Design</li>
-      <li>✅ GitHub & Hosting</li>
+      <li>🌀 HTML5</li>
+      <li>🔥 CSS3</li>
+      <li>💻 Responsive Design</li>
+      <li>🌐 GitHub Deployment</li>
     </ul>
-  </section>
-
-  <section id="projects" class="section">
+  </section>  <section id="projects" class="section">
     <h2>Projects</h2>
     <ul>
-      <li>🔹 Personal Portfolio Website</li>
-      <li>🔹 Simple To-Do List (with HTML/CSS/JS)</li>
-      <li>🔹 Landing Page for Product</li>
+      <li>🍜 Naruto Style Portfolio</li>
+      <li>📝 To-Do App (Simple JS)</li>
+      <li>🌟 Gradient Landing Page</li>
     </ul>
-  </section>
-
-  <section id="contact" class="section">
+  </section>  <section id="contact" class="section">
     <h2>Contact</h2>
     <p>Email: karan@example.com</p>
     <p>GitHub: <a href="https://github.com/KaranKk187" target="_blank">github.com/KaranKk187</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Karan Kumar | Portfolio</p>
-  </footer>
-</body>
+  </section>  <footer>
+    <p>&copy; 2025 Karan Kumar | 🍥 Naruto Dev Portfolio</p>
+  </footer>  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script></body>
 </html>
