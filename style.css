@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset + Font */
 * {
   margin: 0;
   padding: 0;
@@ -7,94 +7,111 @@
 }
 
 body {
-  background: #000;
-  color: #f2f2f2;
+  background: #0f0f0f;
+  color: #fff;
   line-height: 1.6;
 }
 
 /* Navbar */
 .navbar {
-  background: #111;
+  background: #1a1a1a;
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #00f0ff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.navbar .logo {
+.logo {
   font-size: 1.5rem;
-  color: red;
+  color: #00f0ff;
+  font-weight: bold;
 }
 
-.navbar ul {
+nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-.navbar ul li a {
+nav ul li a {
   text-decoration: none;
   color: #fff;
   transition: 0.3s;
 }
 
-.navbar ul li a:hover {
-  color: red;
+nav ul li a:hover {
+  color: #00f0ff;
 }
 
 /* Hero */
 .hero {
   text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(145deg, #000, #111);
+  padding: 100px 20px;
+  background: linear-gradient(145deg, #000, #1f1f1f);
+  animation: fadeIn 2s ease-in-out;
 }
 
 .hero h1 {
   font-size: 3rem;
-  color: red;
-  text-shadow: 0 0 10px red;
-  letter-spacing: 5px;
-  text-transform: uppercase;
+  color: #00f0ff;
+  margin-bottom: 10px;
 }
 
 .hero p {
-  margin-top: 20px;
   font-size: 1.2rem;
   color: #ccc;
 }
 
-/* Sections */
+/* Section */
 .section {
-  padding: 50px 20px;
+  padding: 60px 20px;
   max-width: 900px;
   margin: auto;
+  animation: slideUp 1.5s ease;
 }
 
 .section h2 {
-  color: red;
+  color: #00f0ff;
   margin-bottom: 20px;
+  border-bottom: 2px solid #00f0ff;
+  display: inline-block;
 }
 
-.section p, .section ul, .section li {
+.section ul li,
+.section p {
   color: #ddd;
   margin-bottom: 10px;
 }
 
 /* Footer */
 footer {
-  background: #111;
+  background: #1a1a1a;
   text-align: center;
   padding: 20px;
   color: #aaa;
-  border-top: 2px solid red;
+  border-top: 2px solid #00f0ff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .navbar ul {
+  nav ul {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 10px;
   }
 
   .hero h1 {
