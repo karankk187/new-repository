@@ -1,73 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Karan Kumar | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Player 456 | Squid Game Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }body {
+  background: #000;
+  color: #f2f2f2;
+  line-height: 1.6;
+}
+
+.navbar {
+  background: #111;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid red;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  color: red;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: red;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(145deg, #000, #111);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: red;
+  text-shadow: 0 0 10px red;
+}
+
+.hero p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section h2 {
+  color: red;
+  margin-bottom: 20px;
+}
+
+.section p, .section ul, .section li {
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+  border-top: 2px solid red;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+  </style>
 </head>
 <body>
-
-  <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
-
-  <header>
-    <h1 class="glow">Hello, I'm Karan Kumar</h1>
-    <p>BCA Student | Punjab Technical University | 5th Semester</p>
-  </header>
-
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>I’m a BCA 5th semester student at Punjab Technical University. I love web development and exploring new tech. I enjoy building simple, beautiful, and responsive websites.</p>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML5 & CSS3</li>
-        <li>JavaScript (Basic)</li>
-        <li>Responsive Design</li>
-        <li>Git & GitHub</li>
-        <li>Learning React.js</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Portfolio Website</strong> – This very website with dark mode + animation</li>
-        <li><strong>To-Do App</strong> – JavaScript-based task list (Coming Soon)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Interests</h2>
-      <p>I’m interested in AI tools, frontend design, cybersecurity basics, and productivity hacks.</p>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:karangeorgeingply@gmail.com">karangeorgeingply@gmail.com</a></p>
-      <p>Location: Punjab, India</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Karan Kumar | BCA - PTU</p>
+  <nav class="navbar">
+    <div class="logo">⭕🔺⏹️ Player 456</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>  <header class="hero">
+    <h1>Welcome to My Game</h1>
+    <p>I’m Karan Kumar aka Player 456, BCA Student at PTU</p>
+  </header>  <section id="about" class="section">
+    <h2>⭕ About Me</h2>
+    <p>BCA 5th semester student from Punjab Technical University. I love creating web experiences that are dark, deep and dynamic — like Squid Game!</p>
+  </section>  <section id="skills" class="section">
+    <h2>🔺 Skills</h2>
+    <ul>
+      <li>HTML5, CSS3</li>
+      <li>JavaScript Basics</li>
+      <li>Responsive Web Design</li>
+      <li>GitHub Deployment</li>
+    </ul>
+  </section>  <section id="projects" class="section">
+    <h2>⏹️ Projects</h2>
+    <p>🎯 Personal Portfolio<br>🎯 To-Do List App<br>🎯 Responsive Landing Page</p>
+  </section>  <section id="contact" class="section">
+    <h2>📞 Contact Me</h2>
+    <p>Email: karan@example.com</p>
+    <p>GitHub: github.com/KaranKk187</p>
+  </section>  <footer>
+    <p>&copy; 2025 Player 456 | Designed in Squid Game Style</p>
   </footer>
-
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-
-    window.onload = function () {
-      document.body.classList.add('loaded');
-    };
-  </script>
 </body>
 </html>
-  
- 
-
-  
